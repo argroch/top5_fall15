@@ -19,9 +19,9 @@
             <h3 class="masthead-brand">Aaron's Top 5</h3>
             <nav>
               <ul class="nav masthead-nav">
-                <li><%= link_to "Home", root_path %></li>
-                <li><%= link_to "Artists", artists_path %></li>
-                <li><%= link_to "Songs", songs_path %></li>
+                <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+                <li class="<%= 'active' if current_page?(artists_path) %>"><%= link_to "Artists", artists_path %></li>
+                <li class="<%= 'active' if current_page?(songs_path) %>"><%= link_to "Songs", songs_path %></li>
               </ul>
             </nav>
           </div>

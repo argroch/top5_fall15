@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <%= f.text_field :name, placeholder: "Artist/Group Name", class: "form-control center-it" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.select(:rating, @ratings.collect { |r| [ r ] }, { include_blank: "Rate It!" } ) %>
+  <div class="form-group">
+    <%= f.select(:rating, @ratings.collect { |r| [ r ] }, { include_blank: "Rate It!" }, class: "form-control" ) %>
   </div>
-  <div class="field">
-    <%= f.select(:artist_id, @artists.collect { |a| [a.name, a.id] }, { include_blank: "Choose an Artist" } ) %>
+  <div class="form-group">
+    <%= f.select(:artist_id, @artists.collect { |a| [a.name, a.id] }, { include_blank: "Choose an Artist" }, class: "form-control" ) %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit "Sing It Loud", class: "btn btn-warning" %>
   </div>
 <% end %>

@@ -11,11 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <%= f.text_field :name, placeholder: "Artist/Group Name", class: "form-control center-it" %>
+      </div>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <strong>Upload Image: </strong>
+  </div>
+  <div class="form-group">
+    <%= f.file_field :avatar, class: "file-field" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Add Artist", class: "btn btn-warning" %>
   </div>
 <% end %>
