@@ -13,7 +13,10 @@
 	        <p>by <%= song.artist.name %></p>
 	        <p>
 	          <% song.rating.times do %>
-	            <span class="glyphicon glyphicon-star"></span>
+	            <span class="glyphicon glyphicon-star yellow-stars"></span>
+	          <% end %>
+	          <% (10-song.rating).times do %>
+							<span class="glyphicon glyphicon-star"></span>
 	          <% end %>
 	        </p>
 	        <p>
